@@ -30,10 +30,9 @@ public class Board {
     public void movePiece(Coordinate from, Coordinate to) {
         Piece piece = getPiece(from);
 
-        // removePiece(from);   // <-- сломано намеренно
+        removePiece(from);
         setPieces(to, piece);
     }
-
     //метод для расстоновки фигур ПЕШОК
     public void setupDefaultPositions() {
         for (File file : File.values()) {
