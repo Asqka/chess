@@ -1,14 +1,11 @@
-package org.example.pieces.Board;
+package org.example;
 
-import org.example.Coordinate;
-import org.example.File;
-import org.example.PieceFactory;
+import org.example.pieces.Board.Board;
 
 public class BoardFactory {
     private PieceFactory pieceFactory = new PieceFactory();
 
     public Board fromFEN(String fen) {
-        //rnbakbnr/pppppppp/8/8/8/8/{{{{{{{{/RNBQKBNR w KQkq - 0 1
         Board board = new Board();
         String[] parts = fen.split(" ");
         //делим ряды

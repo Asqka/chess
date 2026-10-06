@@ -1,5 +1,8 @@
-package org.example;
+package org.example.pieces.Board;
 
+import org.example.Color;
+import org.example.Coordinate;
+import org.example.File;
 import org.example.pieces.Piece;
 
 import java.util.Set;
@@ -13,7 +16,7 @@ public class ConsoleBoard {
     public static final String ANSI_WHITE_PIECE_COLOR = "\u001B[97m";
     public static final String ANSI_BLACK_PIECE_COLOR = "\u001B[30m";
 
-    public static final String ANSI_WHITE_SQUARE_BACKGROUND = "\u001B[47m";
+    public static final String ANSI_WHITE_SQUARE_BACKGROUND = "\u001B[45m";
 
     public static final String ANSI_BLACK_SQUARE_BACKGROUND = "\u001B[0;100m";
 
@@ -50,7 +53,7 @@ public class ConsoleBoard {
             render(board, null);
         }
 
-        private String colorizeSprite (String sprite, Color pieceColor,boolean isSquareDark, boolean isHighlight){
+        private String colorizeSprite (String sprite, Color pieceColor, boolean isSquareDark, boolean isHighlight){
             // format = background color + font color + text
             String result = sprite;
 
