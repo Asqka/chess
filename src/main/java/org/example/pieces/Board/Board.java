@@ -30,7 +30,7 @@ public class Board {
     public void movePiece(Coordinate from, Coordinate to) {
         Piece piece = getPiece(from);
 
-        removePiece(from);
+        // removePiece(from);   // <-- сломано намеренно
         setPieces(to, piece);
     }
 
